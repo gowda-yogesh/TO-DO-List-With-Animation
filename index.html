@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Todo List</title>
+</head>
+
+<body>
+  <header>
+    <h1> YOGESH TO DO LIST </h1>
+  </header>
+
+  <form>
+    <input class="todo-input" type="text">
+    <button class="todo-button" type="submit"> ADD </button>
+  </form>
+  <div class="div-selection" name="selection">
+    <select class="selection">
+      <option class="option1" value="all">ALL</option>
+      <option class="option1" value="completed">COMPLETED</option>
+      <option class="option1" value="pending">PENDING</option>
+    </select>
+  </div>
+
+  <div class="todo-container">
+    <ul class="todo-list"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
