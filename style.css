@@ -14,8 +14,11 @@ body{
 }
 
 header{
+    display: flex;
     font-size: 1rem;
     padding-top: 10vh;
+    justify-content: center;
+    text-align: center;
 }
 
 header,form {
@@ -51,18 +54,17 @@ form button:hover{
 
 .todo-container{
 
+    
     padding-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.todo-list{
-    width: 30%;
+    
 }
 
 .todo-structure{
     
+    /* width: 150px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -109,7 +111,7 @@ div button{
 
 .fall-transition{
 
-    transform: translateY(10rem) rotateZ(45deg)  ;
+    transform: translateY(4rem) rotateZ(10deg)  ;
     opacity: 0.2;
     transition: 600ms ease-in;
     /* transition: 30ms all ease  ; */
@@ -120,7 +122,7 @@ div button{
      
     text-decoration: line-through;
     opacity: 0.2;
-    transition: 200ms ease-in  ;
+    transition: 600ms ease-in  ;
 }
 
 /* WRT TO OPTION  */
@@ -139,7 +141,7 @@ div button{
     width: 150px;
     height: 25px;
     color: #d33c50;
-    font-size: ;
+    font-size: 0.8em;
 
 }
 
