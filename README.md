@@ -1,5 +1,5 @@
 # TO-DO-List-With-Animation
-Its a  Elegant TO DO  list completely done using html 5 ,  CSS3 ,  vanilla JavaScript .
+Its an elegant To-Do list with all the possible features including local Storage , completely done using html 5 , CSS3 , vanilla JavaScript .
 
 30.7.20 => 1.  Upadted selection Criteria.
            2.  Made it responsive.
