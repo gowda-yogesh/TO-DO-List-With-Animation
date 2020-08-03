@@ -26,37 +26,52 @@ function addTodo(e) {
     // prevent Defauth will not be suggested so spell properly 
     e.preventDefault();
     console.log(e);
+    console.log(todoInput.value);
+    console.log(todoInput.value.length);
 
-    //add list in proper structue
-    const todoStructue = document.createElement("div");
-    todoStructue.classList.add("todo-structure")
 
-    // adding list
-    const dooo = document.createElement("li");
-    dooo.classList.add("dooo");
-    dooo.innerText = todoInput.value;
-    todoStructue.appendChild(dooo);
+    //add elemnts if we have inputs else ignore
+    if (todoInput.value.length > 0) {
 
-    //add submit button
-    const doooTickButton = document.createElement("button");
-    doooTickButton.innerText = "Tick";
-    doooTickButton.classList.add("dooo-tick-button");
-    todoStructue.appendChild(doooTickButton);
+        //add list in proper structue
+        const todoStructue = document.createElement("div");
+        todoStructue.classList.add("todo-structure")
 
-    //add delete button
-    const doooDelButton = document.createElement("button");
-    doooDelButton.innerText = "Del";
-    doooDelButton.classList.add("dooo-delete-button");
-    todoStructue.appendChild(doooDelButton);
+        // adding list
+        const dooo = document.createElement("li");
+        dooo.classList.add("dooo");
+        // dont use inner text ;
+        // dooo.innerText = todoInput.value;
+        //alternative method
+        text = document.createTextNode(todoInput.value);
+        dooo.appendChild(text);
+        todoStructue.appendChild(dooo);
 
-    //add structure to ul
-    todoAddList.appendChild(todoStructue);
+        //add submit button
+        const doooTickButton = document.createElement("button");
+        doooTickButton.innerText = "Tick";
+        doooTickButton.classList.add("dooo-tick-button");
+        todoStructue.appendChild(doooTickButton);
 
-    //add to local strogae after completing the html and css 
-    storeTodo(todoInput.value);
+        //add delete button
+        const doooDelButton = document.createElement("button");
+        doooDelButton.innerText = "Del";
+        doooDelButton.classList.add("dooo-delete-button");
+        todoStructue.appendChild(doooDelButton);
 
-    //reset input value
-    todoInput.value = "";
+        //add structure to ul
+        todoAddList.appendChild(todoStructue);
+
+        //add to local strogae after completing the html and css 
+        storeTodo(todoInput.value);
+
+        //reset input value
+        todoInput.value = "";
+    }
+    //if we want an alert in case when user does not enter the value  
+    // else {
+    //     alert("Please add a valid List before adding to List")
+    // }
 
 }
 
